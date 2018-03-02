@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :image
       t.integer :price_cents
       t.integer :quantity
+      t.string :rating
 
       t.timestamps null: false
     end
