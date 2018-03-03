@@ -25,8 +25,28 @@
         </dl>
       </div>
 
+      <div class="col-sm-8">
+        <dl class="dl-horizontal">
+          <dd> <h3 align='center'> Add Review </h3></dd>
+          <%= form_for([@product, @product.ratings.build]) do |f| %>
+          <div class="form-group">
+            <dt>
+              <%= f.label :rating %></dt>
+              <dd><%= f.select :rating, [5,4,3,2,1], class: 'form-control' %></dd>
+
+              <dt>
+                <%= f.label :description %></dt>
+                <dd><%= f.text_field :description, class: 'form-control' %></dd>
+
+                <dd><%= f.submit 'Submit Review', class: 'btn btn-primary' %></dd>
+                <% end %>
+              </div>
+            </dl>
+          </div>
+
+
+
       <% if @ratings.count != 0 %>
-        <h3 align='center'> Reviews </h3>
         <%= render partial: "rating", locals:{ratings: @ratings} %>
       <% else %>
         <h3 align='center'> Reviews </h3>
