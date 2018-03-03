@@ -3,7 +3,7 @@
   <dd><h3 align='center'> Reviews </h3></dd>
   <%  @ratings.each do |rating| %>
   <dt> User </dt>
-  <dd><%= rating.user_id %></dd>
+  <dd><%= rating.user.name %></dd>
   <dt>Rating</dt>
   <dd><%= rating.rating %>/5</dd>
   <dt>Review</dt>

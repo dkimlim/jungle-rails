@@ -8,10 +8,11 @@ class RatingsController < ApplicationController
   	new_review = Rating.new({product_id: product_id, user_id: reviewer, rating: rating, description: review})
 
   	if new_review.save
+      flash[:success] = 'Thank you for reviewing our product!'
   		redirect_to :back
   	else
   		redirect_to :back
-  		flash.now[:danger] = 'Your review was not saved.'
+  		flash[:alert] = 'Your review was not saved.'
   	end
   end
 end
