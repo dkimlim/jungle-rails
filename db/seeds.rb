@@ -154,14 +154,13 @@ prod12 = cat3.products.create!({
 Rating.destroy_all
 
 Rating.create!({
-  product_id: 11,
+  product_id: 7,
   user_id: 1,
   description:  'Cool cool cool',
   rating: 5
 })
 
-Rating.create!({
-  product_id: 9,
+prod12.ratings.create!({
   user_id: 2,
   description:  'Meh, could be cooler',
   rating: 3

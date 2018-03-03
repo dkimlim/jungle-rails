@@ -1,0 +1,13 @@
+<div class="col-sm-8">
+<dl class="dl-horizontal">
+<%  @ratings.each do |rating| %>
+  <dt> User </dt>
+  <dd><%= rating.user.name %></dd>
+  <dt>Rating</dt>
+  <dd><%= rating.rating %>/5</dd>
+  <dt>Review</dt>
+  <dd><%= rating.description %></dd>
+  <br>
+<% end %>
+</dl>
+</div>
